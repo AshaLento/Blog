@@ -1,26 +1,34 @@
+<%- include("partials/header")  -%>
+<h1>Student Details</h1>
+<p> <%= startingContent %> </p>
 
-<%- include("partials/header"); -%>
-    <h1>Blog</h1>
-    <p> <%= startingContent %> </p>
+<%  student.forEach(function(student){ %>
 
+  <h3><%=student.name%></h3>
+  <p>
+    <%=student.class%>
+  </p>
+  <p>
+  <%=student.address.substring(0, 100) + " ..."%>
+  <a href="/students/<%=student._id%>">Read More</a>
+  </p>
+ <!-- <table>
+    <tr>
+      <th> Name </th>
+      <th> Class</th>
+    </tr>
+    <tr>
+      <td><%=student.name%></td>
+      <td><%=student.class%></td>
+    </tr>
+  </table> -->
 
-  <%  posts.forEach(function(post){ %>
-
-    <h1><%=post.title%></h1>
-    <p>
-    <%=post.content.substring(0, 100) + " ..."%>
-    <a href="/posts/<%=post._id%>">Read More</a>
-    </p>
-
-
-    <% }) %>
-    <form action="/compose" class="inline">
-      <div style="float: right;"">
-        <button class="btn btn-primary float-right submit-button" >Compose</button>
-      </div>
+  <% }) %>
+  <form action="/create" class="inline">
+    <div style="float: right;"">
+      <button class="btn btn-primary float-right submit-button" >CREATE</button>
+    </div>
 
 </form>
 
-
-
-<%- include("partials/footer"); -%>
+<%- include("partials/footer")  -%>

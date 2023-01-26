@@ -1,0 +1,35 @@
+<%- include("partials/header")  -%>
+<h1>Create Student details</h1>
+
+<form class="" action="/Create" method="post">
+  <div class="col-md-12">
+<label>Name:</label>
+<input class="form-control" type="text" name="studentName" value="">
+<label>Age</label>
+<input class="form-control" type="text" name="studentAge" value="">
+<label>Address</label>
+<textarea class="form-control" name="studentAddress" rows="5" cols="20"></textarea>
+<label>Class</label>
+<input class="form-control" type="text" name="studentClass" value="">
+<label>Class Teacher</label>
+<input class="form-control" type="text" name="classTeacher" value="">
+<label>Guardian Name</label>
+<input class="form-control" type="text" name="guardianName" value="">
+<label>Student Contact</label>
+<input class="form-control" type="text" name="studentContact" value="">
+</div>
+<div class="col-md-6">
+  <button class="btn btn-primary float-left" type="submit" name="button">Publish</button>
+</div>
+</form>
+<form action="/" class="inline">
+  <div style="float: right; text-align:right" >
+  <div class="col-md-6">
+    <button class="btn btn-primary float-right submit-button">Back</button>
+  </div>
+    <!-- <button class="btn btn-primary float-left submit-button" >Back</button> -->
+  </div>
+</form>
+
+
+<%- include("partials/footer")  -%>
